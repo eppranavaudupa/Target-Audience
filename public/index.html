@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title class="title">Chatting app</title>
+</head>
+<body>
+    <h1>My Chat</h1>
+    <div class="main">
+        <div class="name">
+            <span><i class="far fa-user"></i></span>
+            <input id="name-input" type="text"
+            class="name-input"
+            value="anonymous"
+            maxlength="20">
+        </div>
+        <ul class="message-container" id="message-container">
+            <li class="message-left"></li>
+            <p class="message">
+                udupa   Lorem ipsum 
+                <span>blue bird .july 26 10:10</span>
+            </p>
+            <li class="message-right"></li>
+            <p class="message">
+                udupa   Lorem ipsum 
+                <span>blue bird .july 26 10:10</span>
+            </p>
+            <li class="message-feedback"><p class="feedback" id="feedback">some is typing a message</p></li>
+        </ul>
+        <form class="message-form" id="message-form">
+            <input type="text" name="message " id="message-input" class="message-input">
+            <div class="v-divider"></div>
+            <button class="send-button" type="submit">send
+                <span class="fas fa-paper-plane"></span>
+            </button>
+        </form>
+    </div>
+    <h3 class="clients-total" id="clients-total">Total Clients:1</h3>
+</body>
+</html>
