@@ -1,0 +1,1 @@
+This is  file for a simple chat application named "Target-Audience". It allows multiple clients (users) to send messages to a single receiver (potentially another user or a server).using socket.io
