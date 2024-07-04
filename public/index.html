@@ -19,16 +19,18 @@
             maxlength="20">
         </div>
         <ul class="message-container" id="message-container">
-            <li class="message-left"></li>
+            <li class="message-left">
             <p class="message">
                 udupa   Lorem ipsum 
                 <span>blue bird .july 26 10:10</span>
             </p>
-            <li class="message-right"></li>
+        </li>
+            <li class="message-right">
             <p class="message">
                 udupa   Lorem ipsum 
                 <span>blue bird .july 26 10:10</span>
             </p>
+            </li>
             <li class="message-feedback"><p class="feedback" id="feedback">some is typing a message</p></li>
         </ul>
         <form class="message-form" id="message-form">
@@ -40,5 +42,8 @@
         </form>
     </div>
     <h3 class="clients-total" id="clients-total">Total Clients:1</h3>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" integrity="sha512-hUhvpC5f8cgc04OZb55j0KNGh4eh7dLxd/dPSJ5VyzqDWxsayYbojWyl5Tkcgrmb/RVKCRJI1jNlRbVP4WWC4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
 </body>
 </html>

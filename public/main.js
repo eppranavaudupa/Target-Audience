@@ -1,9 +1,9 @@
     const socket = io();
-    const clientsTotal = document.getElementById('clients-total')
-    const messageContainer =document.getElementById('message-container');
-    const nameInput =document.getElementById("name-input");
-    const messageForm = document.getElementById("message-form");
-    const messageInput = document.getElementById("message-input");
+    let clientsTotal = document.getElementById('clients-total')
+    let messageContainer =document.getElementById('message-container');
+    let nameInput =document.getElementById("name-input");
+    let messageForm = document.getElementById("message-form");
+    let messageInput = document.getElementById("message-input");
 
     socket.on('clients-total',(data)=>{
    clientsTotal.innerHTML= `Total Clients:${data}`
@@ -19,10 +19,28 @@ function sendMessage(){
         name:nameInput.value,
         message:messageInput.value,
         dateTIme:new Date()
+        
     }
     socket.emit('message',data)
+    addMessageToUI(true,data);
+    messageInput ='';
 }
 socket.on('chat-message',(data)=>{
     console.log(data)
+    addMessageToUI(false,data)
 })
+function addMessageToUI(isownMessage,data){
+    const element = ` <li class="${isownMessage} ? message-right":"message-left">
+    <p class="message">
+    ${data.message}
+   
+    </p>
+</li>`
+messageContainer.innerHTML += element;
+scrollTobottom()
 
+}
+
+function scrollTobottom(){
+    messageContainer.scrollTo(0,messageContainer.scrollHeight)
+}
